@@ -6,7 +6,7 @@ import javax.security.auth.login.LoginException;
 public class Main {
 
     public static void main(String[] args) throws LoginException {
-        JDA jda = (JDA) JDABuilder.createDefault("ODAwODc0MTY4MzA3NTQ4MTkw.YAYeMQ.xy15HYAcZrf3F4xkVhq_yMtY25M");
+        JDA jda = (JDA) JDABuilder.createDefault("!token");
         try {
             ((JDABuilder) jda).build();
         }catch (LoginException e){
