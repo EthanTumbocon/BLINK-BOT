@@ -1,24 +1,28 @@
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Activity;
 
 import javax.security.auth.login.LoginException;
-import javax.security.auth.login.LoginException;
-        import net.dv8tion.jda.api.JDA;
-        import net.dv8tion.jda.api.JDABuilder;
 
 public class Main {
-    public Main() {
-    }
-
+//https://discord.com/oauth2/authorize?client_id=<client_id>&scope=bot;
     public static void main(String[] args) {
-        JDA jda = (JDA) JDABuilder.createDefault("!token");
-
+        JDABuilder jdaBuilder = JDABuilder.createDefault("!token");
+        PingPong pingPong = new PingPong();
+        JDABuilder.addEventListeners(pingPong);
+        JDABuilder.setActivity(Activity.watching("Listening to kpop!"));
+        JDA jda = null;
         try {
-            ((JDABuilder)jda).build();
-        } catch (LoginException var3) {
-            var3.printStackTrace();
+            jda = jdaBuilder.build();
+        } catch (LoginException e) {
+            e.printStackTrace();
         }
-
+        try {
+            jda.awaitReady();
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
     }
-}{
 }
+
+
