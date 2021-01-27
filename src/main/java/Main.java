@@ -8,8 +8,8 @@ public class Main {
 //https://discord.com/oauth2/authorize?client_id=<client_id>&scope=bot;
     public static void main(String[] args) {
         JDABuilder jdaBuilder = JDABuilder.createDefault("!token");
-        PingPong pingPong = new PingPong();
-        JDABuilder.addEventListeners(pingPong);
+        BlackPink blackPink = new BlackPink();
+        JDABuilder jdaBuilder1 = JDABuilder.addEventListeners(blackPink);
         JDABuilder.setActivity(Activity.watching("Listening to kpop!"));
         JDA jda = null;
         try {
