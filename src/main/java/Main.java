@@ -6,7 +6,8 @@ public class Main {
         JDABuilder jda =  JDABuilder.createDefault("!token");
         // need to build a pathway to get youtube integrated
         //need to set commands such as "-p (SONG)", -stop etc
-
+        // need to be able to add another command for stopping music
+        //need commands for !blackpink
     }
 }
 
