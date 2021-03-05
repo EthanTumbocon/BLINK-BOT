@@ -8,6 +8,8 @@ public class Main {
         //need to set commands such as "-p (SONG)", -stop etc
         // need to be able to add another command for stopping music
         //need commands for !blackpink
+        // more commands for kicking bot out of the server
+
     }
 }
 
